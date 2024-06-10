@@ -1,6 +1,7 @@
 package com.cursoalura.conversordemonedas.consultas;
 
 import com.cursoalura.conversordemonedas.modelos.ConversionMoneda;
+import com.cursoalura.conversordemonedas.modelos.ConversionMonedaDTO;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -25,7 +26,8 @@ public class ConsultaMoneda {
 
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return new Gson().fromJson(response.body(), ConversionMoneda.class);
+            ConversionMonedaDTO conversion = new Gson().fromJson(response.body(), ConversionMonedaDTO.class);
+            return new ConversionMoneda(conversion, cantidad);
         } catch(IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

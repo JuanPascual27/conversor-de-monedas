@@ -18,7 +18,8 @@ public class Main {
                 5) Dólar >>> Peso colombiano
                 6) Peso colombiano >>> Dólar
                 7) Otras conversiones
-                8) Salir
+                8) Historial de conversiones
+                9) Salir
                 ********************************************************************************
                 Elija una opción válida:
                 """;
@@ -26,7 +27,7 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
 
         int opcion = 0;
-        while(opcion != 8) {
+        while(opcion != 9) {
             System.out.print(textoMenu);
             try {
                 opcion = teclado.nextInt();
@@ -57,6 +58,9 @@ public class Main {
                     acciones.convertirOtraMoneda();
                     break;
                 case 8:
+                    acciones.verHistorial();
+                    break;
+                case 9:
                     System.out.println("Gracias por usar el conversor de monedas");
                     break;
                 default:

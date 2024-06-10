@@ -1,0 +1,20 @@
+[
+  {
+    "monedaBase": "USD",
+    "monedaObjetivo": "MXN",
+    "tasaDeConversion": 18.3131,
+    "cantidad": 12.0,
+    "resultado": 219.7572,
+    "fecha": "2024-06-09",
+    "hora": "19:24:19"
+  },
+  {
+    "monedaBase": "MXN",
+    "monedaObjetivo": "USD",
+    "tasaDeConversion": 0.05461,
+    "cantidad": 233.0,
+    "resultado": 12.72413,
+    "fecha": "2024-06-09",
+    "hora": "19:24:31"
+  }
+]
